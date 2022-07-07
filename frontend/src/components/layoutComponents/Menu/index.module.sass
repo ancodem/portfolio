@@ -1,0 +1,34 @@
+@use '../../../style/variables.module.sass' as style
+
+.menuWrapper
+  background-color: #52307c
+  position: fixed
+  top:0
+  height: 60px
+  width: 100%
+
+.menu
+  padding: 7px 0 0 0
+  ul
+    display: flex
+    justify-content: center 
+    li
+      text-transform: uppercase
+      padding: 1em
+      display: inline
+      a
+        letter-spacing: 0.2em
+        font-family: style.$header-menu-font-family
+        font-size: calc(0.3em + 1.9vw)
+        text-decoration: none
+        color: rgba(256,256,256, .4)
+        outline-color: black
+        &:focus,
+        &:hover
+          color: white
+
+
+@media screen and (min-width: 1130px)
+  .menu ul li a
+    font-size: 25px
+   

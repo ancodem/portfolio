@@ -1,0 +1,28 @@
+@use 'style/variables.module.sass' as style
+.container
+  background-color: style.$primary-dark-color
+  width: 100vw
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .text
+    background-color: style.$primary-light-color
+    height: 200px
+    width: 600px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-transform: uppercase
+    color: style.$primary-dark-color
+    font-size: 40pt
+    border-radius: 30px
+    border: solid 1px white
+    
+    @media (max-width: style.$mobile)
+      height: 100px
+      flex-direction: column
+      margin: 20px
+      font-size: 25pt
+      text-align: center

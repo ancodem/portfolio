@@ -1,0 +1,60 @@
+@use 'src/style/variables.module.sass' as style
+
+.title_wrapper
+  padding: 18vw 0 0 0
+  display: flex
+  align-items: center
+  flex-direction: column
+
+  .title
+    text-transform: uppercase
+    letter-spacing: 2.5vw
+    margin: 0 -2.5vw 0 0
+    color: style.$title-font-color
+    font-size: calc(2em + 4vw)
+    font-family: style.$title-font-family
+    transition-duration: 1.5s
+    cursor: default
+    color: rgb(245,245,245)
+    text-shadow: 0 -1px rgba(0,0,0,.1)
+    animation: pulsate 1.2s linear infinite
+
+  .text
+    margin: 100px 0 0 0
+    padding: 0 25px 0 25px
+    max-width: 1400px
+    outline-color: black
+    text-align: center
+    letter-spacing: 0.3em
+    line-height: 2em
+    text-align: center
+    color: rgba(256,256,256, .6)
+    font-size: calc(0.5em + 1.4vw)
+    font-family: style.$title-font-family
+
+  @-webkit-keyframes pulsate
+    50%
+      color: #fff
+      text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff
+
+  @keyframes pulsate
+    50%
+      color: #fff
+      text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff
+
+@media screen and (max-width: 640px)
+  .title_wrapper
+    padding: 150px 0 0 0
+
+@media screen and (min-width: 1400px)
+  .title_wrapper
+    padding: 250px 0 0 0
+
+@media screen and (min-width: 1100px)
+  .title_wrapper .text
+    font-size: 25px
+
+@media screen and (min-width: 1500px)
+  .title_wrapper .title
+    font-size: 110px
+

@@ -1,0 +1,10 @@
+@use 'style/variables.module.sass' as style
+.divider
+  background-color: style.$primary-light-color
+  height: 1px
+  max-width: 700px
+  margin: 0 auto
+
+  @media screen and (max-width: style.$mobile)
+
+    max-width: 250px
